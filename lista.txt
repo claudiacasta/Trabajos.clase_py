@@ -1,0 +1,11 @@
+# Crear una lista con los números del 1 al 20
+numeros = list(range(1, 21))
+
+# Invertir la lista
+numeros_inverso = numeros[::-1]
+
+# Unir los números con un guion medio
+resultado = '-'.join(map(str, numeros_inverso))
+
+# Mostrar el resultado
+print(resultado)

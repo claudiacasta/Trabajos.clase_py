@@ -1,0 +1,16 @@
+# Solicitar la entrada de números al usuario
+import statistics
+
+
+entrada = input("Introduce una muestra de números separados por comas: ")
+
+# Convertir la entrada en una lista de números flotantes
+numeros = [float(num) for num in entrada.split(",")]
+
+# Calcular el promedio y la desviación típica
+promedio = statistics.mean(numeros)
+desviacion_tipica = statistics.stdev(numeros)
+
+# Mostrar los resultados
+print(f"Promedio: {promedio}")
+print(f"Desviación Típica: {desviacion_tipica}")

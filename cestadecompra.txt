@@ -1,0 +1,26 @@
+def agregar_articulo(diccionario):
+    articulo = input("Introduce el nombre del artículo: ")
+    precio = float(input(f"Introduce el precio de {articulo}: $"))
+    diccionario[articulo] = precio
+
+def mostrar_lista_compra(diccionario):
+    print("\nLista de la compra:")
+    total = 0
+    for articulo, precio in diccionario.items():
+        print(f"{articulo}: ${precio:.2f}")
+        total += precio
+    print(f"\nTotal: ${total:.2f}")
+
+def main():
+    cesta_compra = {}
+    
+    while True:
+        agregar_articulo(cesta_compra)
+        continuar = input("¿Quieres añadir otro artículo? (sí/no): ").strip().lower()
+        if continuar != 'sí':
+            break
+
+    mostrar_lista_compra(cesta_compra)
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,75 @@
+def mostrar_menu():
+    print("\nMenú:")
+    print("1. Añadir/modificar")
+    print("2. Buscar")
+    print("3. Borrar")
+    print("4. Listar")
+    print("5. Salir")
+
+def añadir_o_modificar(agenda):
+    nombre = input("Introduce el nombre: ").strip()
+    if nombre in agenda:
+        print(f"Teléfono actual de {nombre}: {agenda[nombre]}")
+        modificar = input("¿Quieres modificar el teléfono? (sí/no): ").strip().lower()
+        if modificar == 'sí':
+            nuevo_telefono = input("Introduce el nuevo teléfono: ").strip()
+            agenda[nombre] = nuevo_telefono
+            print(f"Teléfono de {nombre} actualizado a {nuevo_telefono}.")
+    else:
+        telefono = input("Introduce el teléfono: ").strip()
+        agenda[nombre] = telefono
+        print(f"Contacto {nombre} añadido con el teléfono {telefono}.")
+
+def buscar(agenda):
+    cadena = input("Introduce la cadena de caracteres para buscar: ").strip()
+    contactos = [nombre for nombre in agenda if nombre.startswith(cadena)]
+    if contactos:
+        print("Contactos encontrados:")
+        for contacto in contactos:
+            print(f"{contacto}: {agenda[contacto]}")
+    else:
+        print("No se encontraron contactos.")
+
+def borrar(agenda):
+    nombre = input("Introduce el nombre del contacto a borrar: ").strip()
+    if nombre in agenda:
+        confirmar = input(f"¿Estás seguro de que quieres borrar a {nombre}? (sí/no): ").strip().lower()
+        if confirmar == 'sí':
+            del agenda[nombre]
+            print(f"Contacto {nombre} borrado.")
+        else:
+            print("Operación cancelada.")
+    else:
+        print("Contacto no encontrado.")
+
+def listar(agenda):
+    if agenda:
+        print("Lista de contactos:")
+        for nombre, telefono in agenda.items():
+            print(f"{nombre}: {telefono}")
+    else:
+        print("La agenda está vacía.")
+
+def main():
+    agenda = {}
+    
+    while True:
+        mostrar_menu()
+        opcion = input("Elige una opción (1-5): ").strip()
+
+        if opcion == '1':
+            añadir_o_modificar(agenda)
+        elif opcion == '2':
+            buscar(agenda)
+        elif opcion == '3':
+            borrar(agenda)
+        elif opcion == '4':
+            listar(agenda)
+        elif opcion == '5':
+            print("Saliendo del programa...")
+            break
+        else:
+            print("Opción no válida. Inténtalo de nuevo.")
+
+if __name__ == "__main__":
+    main()

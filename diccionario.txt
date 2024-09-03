@@ -1,0 +1,21 @@
+def agregar_dato(diccionario):
+    clave = input("¿Qué dato quieres añadir (p. ej., nombre, edad, dirección)? ")
+    valor = input(f"Introduce el {clave}: ")
+    diccionario[clave] = valor
+    print("\nContenido actual del diccionario:")
+    for k, v in diccionario.items():
+        print(f"{k}: {v}")
+    print("\n")
+
+def main():
+    informacion_persona = {}
+    
+    while True:
+        agregar_dato(informacion_persona)
+        continuar = input("¿Quieres añadir otro dato? (sí/no): ").strip().lower()
+        if continuar != 'sí':
+            print("Finalizando el programa...")
+            break
+
+if __name__ == "__main__":
+    main()

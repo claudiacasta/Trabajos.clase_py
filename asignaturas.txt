@@ -1,0 +1,27 @@
+# Crear una lista vacía para almacenar las asignaturas
+asignaturas = []
+
+# Pedir al usuario cuántas asignaturas desea ingresar
+num_asignaturas = int(input("¿Cuántas asignaturas deseas ingresar? "))
+
+# Pedir al usuario el nombre de cada asignatura y agregarlo a la lista
+for _ in range(num_asignaturas):
+    asignatura = input("Ingresa el nombre de la asignatura: ")
+    asignaturas.append(asignatura)
+
+# Crear una lista para almacenar las asignaturas que se deben repetir
+asignaturas_repetir = []
+
+# Preguntar la nota de cada asignatura y eliminar las aprobadas
+for asignatura in asignaturas:
+    nota = float(input(f"¿Qué nota sacaste en {asignatura}? "))
+    if nota < 3.5:
+        asignaturas_repetir.append(asignatura)
+
+# Mostrar las asignaturas que se deben repetir
+if asignaturas_repetir:
+    print("Tienes que repetir las siguientes asignaturas:")
+    for asignatura in asignaturas_repetir:
+        print(asignatura)
+else:
+    print("¡Felicidades! Has aprobado todas las asignaturas.")
