@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio con Css</title>
+    <link rel="stylesheet" href="estilo.css">  <!-- Aqui se conecta el html con el css,
+    linkrel es "que va a relacionar" y href "con quien", en este caso quiero relacionar una hoja de estilos con css-->
+    
+    <script type="text/JavaScript" src="/todolodejavascrip/nacho.js"> </script> <!-- Aqui se conecta html con javascript. script type es "que va a relacionar" y src es "con quien "-->
+  
+  </head>
+
+  <body style="background-color: rgb(0, 200, 255)"> <!-- Css en linea, darle color al fondo-->
+    <p>Esta es una página del color rojo</p>
+    <p style="font-family: ink free; font-size: 20px"><!-- tipo de letra y tamaño de la letra-->
+      Esta es una pagina de color rojo
+    </p>
+<!-- ejemplos de div,  div class es una caja, lo que quiere decir que lo que ponga ahi esta dentro de la cajita y es personalizable en css-->
+    <div class="parrafo">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime unde
+        deleniti praesentium impedit dolore modi voluptas aliquam esse, neque
+        dolor quos sapiente quia. Laudantium, ad atque molestiae praesentium
+        minus animi. Officiis provident nisi animi voluptatum voluptatem error
+        velit itaque minima harum, cum rem laudantium eum? Necessitatibus quas
+        velit temporibus omnis dolor optio ducimus, adipisci earum alias eius
+        quae veritatis iusto.
+      </p>
+    </div>
+    <div id="estilos">
+      <div class="primer">este es un parrafo <em> mas </em></div>
+    </div>
+
+    
+    
+    <hr> <!-- el hr es una linea separatoria -->
+
+    <!-- ejercicio de div ,  div class es una caja, lo que quiere decir que lo que ponga ahi esta dentro de la cajita y es personalizable en css-->
+
+    <h1>Elementos padres e hijos</h1>
+    <div id="padre"> <!--selector de id = #-->
+      <div id=" hijo1">
+        <h2>este es un parrafo para el <ins> hijo 1 </ins></h2> <!--selector de tipo (dependiendo de cual sea el selector de tipo (p)(h2)(em)(ins)etc)-->
+      </div>
+      <div class="hijo2"> <!--selector de class . -->
+        <h3>este es un parrafo para el hijo 2</h3>
+      </div>
+    </div>
+
+    <!-- ejercicio de tipos de fuentes -->
+
+
+
+    <hr>
+    <!-- div class es una caja, lo que quiere decir que lo que ponga ahi esta dentro de la cajita y es personalizable en css-->
+    <div class="tipofuentes">
+      <h2>este es un tipo de fuente 1</h2>
+      <h3>este es un tipo de fuente 2</h3>
+      <h4>este es un tipo de fuente 3</h4>
+    </div>
+    <hr>
+  </body>
+</html>
+
+
+<!-- font-style es una propiedad que te permite definir el estilo de una fuente. En otras palabras, determina si el texto se mostrará de forma normal, cursiva u oblicua.-->
+ 
+<section id ="fonest">
+  <hr>
+  <h1> font-style</h1>
+  <hr>
+  <p class="normal"> este es el estilo normal</p>
+  <p class="italica"> este es el estilo normal</p>
+  <p class="oblique"> este es el estilo normal</p>
+</section>
+
+<!-- font-weight propiedad CSS que se utiliza para definir el grosor o peso de una fuente.
+ determina 
+qué tan gruesos o delgados serán los trazos de las letras en un texto.-->
+
+<section id="fonwhe"> 
+  <hr>
+  <h1> font-wheight</h1>
+  <hr>
+  <p class="lighter"> este es el estilo lighter</p>
+  <p class="bold"> este es el estilo bold</p>
+  <p class="bolder"> este es el estilo bolder</p>
+</section>
+
+<!-- class container Crea un contenedor: Define un área donde se ubicará todo el contenido de tu página.
+Centrado: Por lo general, centra el contenido de la página para que no quede pegado a los bordes.
+Ancho máximo: Establece un límite para el ancho del contenido, evitando que se extienda demasiado y se vea desordenado en pantallas grandes.
+Responsividad: Ayuda a que tu diseño se adapte a diferentes dispositivos (móviles, tablets, computadoras), asegurando que se vea bien en todos ellos.-->
+<body class="container">
+  <h1>¡Bienvenido a mi página!</h1>
+  <p>Este es un párrafo de ejemplo. El contenido se adaptará al tamaño de la pantalla.</p>
+</body>
+
+
+
+
+ 
+

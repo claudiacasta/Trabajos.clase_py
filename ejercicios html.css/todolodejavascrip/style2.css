@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(245, 220, 233);
+    color: purple;
+}
+
+.contenedor-app {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.contenedor-app h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin: 1rem;
+}
+
+.agregar-tarea {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.agregar-tarea input {
+    height: 2.4rem;
+    width: 80%;
+    border-radius: 0%;
+    border: .1rem solid #d79ae6;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+.agregar-tarea button {
+    width: 30%;
+    height: 2.4rem;
+    border: .2rem solid #d79ae6;
+    background-color: #d79ae6;
+    color: aliceblue;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: .9rem;
+}
+
+.agregar-tarea button:hover {
+    background-color: #8b20a9;
+    border: none;
+}
+
+.Lista-de-tareas {
+    margin-bottom: 1rem;
+}
+
+.Lista-de-tareas {
+    padding: .5rem;
+}
+
+.Lista-de-tareas ul li {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: .6rem;
+    border-bottom: 1px solid slateblue;
+}
+
+.Lista-de-tareas ul li i {
+    color: #4a0a5c;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.Lista-de-tareas ul li i:hover {
+    color: rgb(180, 30, 175);
+}
+
+.eliminar-todo {
+    height: 2.4rem;
+    background-color: #ad50c7;
+    color: azure;
+    border: none;
+    padding: .8rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: .02rem;
+    width: 100%;
+    cursor: pointer;
+}
+
+.eliminar-todo:hover {
+    background-color: #bb2121;
+}
+
+footer p {
+    text-align: center;
+    margin: 1rem;
+    line-height: 1.6rem;
+}
+
+.mensaje-error {
+    background-color: red;
+    padding: .5rem;
+    border: .2rem solid rgba(255, 0, 0, 0.501);
+    color: white;
+    margin-bottom: 1rem;
+}
+
+/* Estilos para la edición de tareas */
+.tarea-texto {
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+.tarea-editando {
+    display: none;
+    flex-grow: 1;
+    font-size: 1.2rem;
+    border: 1px solid #d79ae6;
+    padding: 0.2rem;
+}
+
+.editando .tarea-texto {
+    display: none;
+}
+
+.editando .tarea-editando {
+    display: block;
+}
+
+.acciones {
+    display: flex;
+    gap: 10px;
+}
+
+
+
+
+

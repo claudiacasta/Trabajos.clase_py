@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link para iconos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="shas512-MV7k8+y+gLIBoVD59lQIYicR" />
+    <link rel="stylesheet" href="style2.css">
+    <title>App de lista de tarea</title>
+    <link rel="icon" href="images/7580949.jpg">
+</head>
+
+<!--input, botones de agregar y eliminar , listas de tareas , iconos-->
+
+<body>
+    <div class="contenedor-app">
+        <h1> Listas de tareas para organizar tu rutina </h1>
+        <div class="agregar-tarea">
+            <input type="text">
+            <button onclick="Agregartarea()"> Agregar </button>
+        </div>
+
+        <div class="Lista-de-tareas">
+            <ul>
+                <li>Nombre de tarea 1 <i class="fa-solid
+            fa-trash"></i> </li>
+                <li>Nombre de tarea 2 <i class="fa-solid
+            fa-trash"></i> </li>
+                <li>Nombre de tarea 3 <i class="fa-solid
+            fa-trash"></i> </li>
+                <li>Nombre de tarea 4 <i class="fa-solid
+            fa-trash"></i></li>
+                <li>Nombre de tarea 5 <i class="fa-solid
+            fa-trash"></i></li>
+            </ul>
+        </div>
+
+        <div>
+            <button class="eliminar-todo" onclick="eliminartodo()"> Eliminar todas las tareas </button>
+        </div>
+
+        <!--copyright-->
+        <footer>
+            <p> © copyright @2024 desarrollado por Claudia Castaño</p>
+        </footer>
+
+        <script src="./script.js"></script>
+
+
+</body>
+
+</html>

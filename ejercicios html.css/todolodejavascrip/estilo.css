@@ -1,0 +1,139 @@
+/* font-family: fuente1 es como un apodo o etiqueta que le asignamos a nuestra nueva fuente personalizada. Al poner este nombre en una regla CSS, estamos diciéndole al navegador: "Cuando veas este nombre, quiero que uses la fuente que definí con @font-face"*/
+
+@font-face {
+    font-family: fuente1;;
+    src: url(fuentes/AdrenalinesDemoRegular.woff);
+}
+
+@font-face {
+    font-family: fuente2 ;;
+    src: url(fuentes/AfterNight.woff);
+}
+
+/* este body no funciona ya que tengo de ejemplo en el html como es el css en una linea */
+body {
+
+    background-color: rgb(69, 186, 147);
+}
+
+p{
+    font-family: ink free;
+    font-size: 40px;
+}
+
+
+.parrafo p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: blue;
+}
+
+#estilos .primer em{
+    color: black;
+    background-color: red;
+}
+
+#padre{
+    color: azure;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+#padre ins{
+    color: purple;
+}
+
+#padre .hijo2 h3 {
+    background-color: blue;
+}
+
+/*Aqui se hace el llamado de html, a la cajita le pusimos nombre que fue tipofuentes y a lo escrito le pusimos una etiqueta distintiva, esto logra que detecte la etiqueta y ponga la fuente que deseamos */
+
+
+.tipofuentes h2{
+    font-family: fuente1;
+}
+
+.tipofuentes h3{
+    font-family: fuente2;
+}
+
+/* el body abarca el estilo en todo el cuerpo del htm a excepción de lo que esté estilizado especificamente */
+body{
+    color: rgb(16, 10, 3);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.tipofuentes h4{
+    color: yellow;
+    font-weight: bold;
+}
+
+/*es una propiedad que te permite definir el estilo de una fuente. En otras palabras, determina si el texto se mostrará de forma normal, cursiva o oblicua */
+
+p.normal {
+    font-style: normal;
+}
+
+p.italica {
+    font-style: italic;
+}
+
+p.oblique {
+    font-style: oblique;
+}
+
+/*propiedad CSS que se utiliza para definir el grosor o peso de una fuente.
+ determina 
+ qué tan gruesos o delgados serán los trazos de las letras en un texto*/
+
+p.lighter{
+    font-weight: lighter;
+}
+
+p.bold {
+    font-weight: bold;
+}
+
+p.bolder {
+    font-weight: bolder;
+}
+
+/* es una herramienta en CSS que te permite organizar elementos en una fila o columna de forma flexible y adaptable*/
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centra el texto*/
+    background-color: yellowgreen; /* color del fondo*/
+    padding: 20px; /*separacion de contenido de la celda en una tabla */
+    border-radius: 10px; /* redondea las esquinas*/
+    box-shadow: 0 0 20px rgba(125,12,125,0.9); 
+}
+
+
+/*animacion de cuadrado moviendose, se aplica a todo lo que tenga div hover, en este caso se me aplica en varios parrafos*/
+
+@keyframes mover {
+0% {
+    translate: 0px 0px;
+    background-color: red;
+}
+50% {
+    translate: 200px 0px;
+    background-color: green;
+    transform: scale(1.5);
+}
+100% {
+    translate: 400px 0px;
+    background-color: blue;
+    transform: scale(2.0);
+}
+}
+
+p:hover {
+    width: 100px;
+    height: 100px;
+    background-color: darkgreen;
+    animation-name: mover;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
